@@ -1,0 +1,17 @@
+body{
+    font: 50px Arial, sans-serif;
+    background: #ccc;
+    color: aqua;
+}
+
+.navbar{
+    background-color: #ed08f5;
+    color: #ccc;
+}
+
+.informacoes{
+    background-color: red;
+}
+p{
+    background: #ccc;
+}

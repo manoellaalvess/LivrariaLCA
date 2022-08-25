@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Livros</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <script src="{% static 'js/javascript.js' %}"></script> -->
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{% url 'inicio' %}">
+            LCA
+        </a>
+        <p>Lista de Livros</p>
+    </nav>
+    
+    <div class="div-pricipal">
+        
+        <div>
+            <table class="table table-success table-striped">
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Preço</th>
+                    <th>Quant.</th>
+                </tr>
+
+                {% for livro in object_list %}
+                <tr>
+                    <td>{{ livro.titulo }}</td>
+                    <td>{{ livro.autor }}</td>
+                    <td>{{ livro.preco }}</td>
+                    <td>{{ livro.quantidade }}</td>
+                </tr>
+
+                {% empty %}
+                <tr>
+                    <td colspan="5">Nenhum livro registrado.</td>
+                </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+
+        <footer class="container-fluid text-center bg-footer margin">Copyright &copy; Livraria Castro Alves</footer>
+    </div>
+
+</body>
+</html>

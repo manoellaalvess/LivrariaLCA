@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="div-pag-form">
+        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'inicio' %}">
+                LCA
+            </a>
+            <p>Cadastrar/Atualizar</p>
+        </nav>
+
+        <section class="vh-100">
+            <div class="container">
+              <div class="row d-flex justify-content-center align-items-center h-100 margin">
+                <div class="col-md-4 mx-auto">
+                  <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-4 text-center">
+                      <form action="" method="post">
+        
+                        {% csrf_token %}
+                
+                        {{ form.as_p }}
+                
+                        <button type="submit" class="btn btn-ligth mt-3 badge bg-primary">Entrar</button>
+                      
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <footer class="container-fluid text-center bg-footer margin">Copyright &copy; Biblioteca Castro Alves</footer>
+    </div>
+</body>
+</html>

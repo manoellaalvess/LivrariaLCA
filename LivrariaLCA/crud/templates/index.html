@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{% url 'inicio' %}">
+            LCA
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'listar/livros' %}">Livros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class=" container-fluid text-center informacoes margin">
+        <h2>Livraria Castro Alves</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat nisi non ante dictum congue. Cras id odio gravida, posuere velit sed, lacinia mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vehicula, ipsum vel congue cursus, mi neque tincidunt enim, egestas porttitor felis neque et risus. Maecenas fringilla hendrerit enim malesuada laoreet. Aenean quis tortor a odio tempus tincidunt. Vivamus rutrum nulla sed metus congue bibendum. Sed ut aliquam purus. Donec odio mauris, commodo sed dignissim vitae, dapibus eget mauris.
+        </p>
+    </article>
+
+
+    <section id="destaques">
+        <div class="container-fluid text-center margin destaques">
+            <h3>Destaques</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/static/img/destaque1.jpg" alt="" width="300px" class="rounded-circle">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/img/destaque.jpeg" alt="" width="300px" height="300px" class="rounded-circle">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/img/destaque3.jpeg" alt="" height="300px" width="300px" class="rounded-circle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid text-center bg-footer margin">Copyright &copy; Livraria Castro Alves</footer>
+
+</body>
+</html>

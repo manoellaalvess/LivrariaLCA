@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <section class="vh-100">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100 margin">
+                <div class="col-md-4 mx-auto">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-4 text-center">
+                            <form action="" method="post">
+
+                                <p>
+                                    Deseja excluir o livro: {{ object }} ?
+                                </p>
+                                {% csrf_token %}
+
+                                {{ form.as_p }}
+
+                                <button type="submit" class="btn-excluir">Excluir</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- <footer class="rodape">Copyright &copy; Biblioteca Castro Alves</footer> -->
+</body>
+</html>

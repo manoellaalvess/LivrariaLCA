@@ -1,0 +1,106 @@
+body{
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6f8597;
+    background-image: url(/static/img/imagem-bg.jpg);
+}
+
+#formulario{
+    background-color:#6f8597; 
+    display: block;
+    text-align: center;
+}
+
+.div-principal{
+    width: 1024px;
+    margin: 20px auto;
+}
+
+.cabecalho-topo{
+    height: 60px;
+    width: 100%;
+    background-color: #d9f00e;
+    padding-top: 10px;
+    position: relative;
+}
+
+.cabecalho-topo h1{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.nav-cabecalho{
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.nav-cabecalho ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-cabecalho li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 0 15px 0 0;
+    padding: 13px;
+}
+
+.nav-cabecalho a{
+    color: #dcf30a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color .3s linear;
+}
+
+.nav-cabecalho a:hover{
+    color: white;
+}
+
+.div-login{
+    width: auto;
+    height: 500px;
+}
+
+.tabela{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela td, .tabela th {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabela th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #162028;
+  color: #6f8597;
+}
+
+
+.rodape{
+    background-color: #cbee08;
+    padding: 25px;
+    font-size: 12px;
+    color: #6f8597;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+.card {
+    width: 100px;
+}
